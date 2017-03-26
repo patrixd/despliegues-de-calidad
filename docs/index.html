@@ -1,0 +1,351 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<section>
+						<h2>
+							DevOps
+						</h2>
+						<p>Metodología de creación de software</p>
+						<aside class="notes">
+							Metodología de creación de software. Que sirve para agilizar el desarrollo.
+							Desde las pruebas de concepto hasta el lanzamiento, pasando por el testeo en entornos de prueba.
+							Todos los pasos requieren de la máxima agilidad posible,
+							y para ello hace falta integrar los procesos de desarrollo con los sistemas.
+						</aside>
+					</section>
+					<section>
+						<h3>
+							DevOps
+						</h3>
+						<img src="img/lifecicle.png"/>
+						<aside class="notes">
+							El acrónimo DevOps indica la colaboración entre las personas que
+							participan en el desarrollo del producto con administradores de sistemas,
+							ingenieros de operaciones, de seguridad, etc.
+							Todos ellos participan juntos en el ciclo de vida del software, desde el
+							diseño, pasando por el desarrollo hasta el soporte del producto.
+							No trata sólo de tecnología sino que está enfocado en las personas y procesos,
+							en la colaboración y comunicación a través de la organización.
+						</aside>
+					</section>
+					<section>
+						<h3>
+							DevOps
+						</h3>
+						<ul>
+							<li>Automatización de tareas</li>
+							<li>Preparación de entornos de desarrollo, pruebas y producción</li>
+							<li>Provee herramientas para realizar despliegues a los entornos</li>
+							<li>Gestiona las distintas configuraciones de los servidores</li>
+						</ul>
+						<aside class="notes">
+							Las tareas más básicas de un devops son: ...
+							El entorno de producción es público a todos los clientes, el de pruebas permite a los testers o
+							resto de la compañía probar los cambios antes de desplegarlos en producción.
+							Respecto al entorno de desarrollo, se suelen utilizar máquinas virtuales que permiten a los
+							desarrolladores tener las mismas configuraciones en sus equipos.
+						</aside>
+					</section>
+					<section>
+						<h3>
+							DevOps
+						</h3>
+						<p>Ventajas</p>
+						<ul>
+							<li>Se fabrica software más rápidamente</li>
+							<li>Software es de mayor calidad</li>
+							<li>Menor coste</li>
+							<li>Frecuencia de despliegues muy alta</li>
+							<li>Menos preocupaciones</li>
+						</ul>
+						<aside class="notes">
+							Frecuencia de despliegues muy alta porque hay menos preocupaciones.
+							Se tiene un sistema ágil, sólido y de confianza.
+
+							...En Badger estamos trabajando en mejorar nuestros procesos de forma continua.
+							Trabajamos en equipos con desarrolladores, testers e ingenieros centrados en
+							automatización para mejorar las tareas del resto de empleados de la organización.
+						</aside>
+					</section>
+					<section>
+						<img src="img/culture.png"/>
+						<aside class="notes">
+							DevOps requiere un cambio cultural hacia la colaboración, la comunicación, y
+							la completa integración entre las antiguas áreas de desarrollo y sistemas.
+							Un equipo devops necesita una cultura donde
+							- Cambios son positivos
+							- Haya transparencia, se recompensen las buenas actitudes
+							- La base es la innovación
+							- Todo el equipo es responsable, sin culpar a otros, donde se abracen los fallos
+							- Confianza
+							- Colaboración, se hable con honestidad y franqueza
+							- Buena Comunicación
+						</aside>
+					</section>
+				</section>
+				<section>
+					<h2>Por donde empezar...</h2>
+					<p>con qué herramientas...</p>
+					<aside class="notes">
+						Ya conocemos la metodología de desarrollo DevOps,
+						pero ¿por donde empezamos para poder desplegar código de calidad?
+					</aside>
+				</section>
+				<section>
+					<section>
+						<h2>Entornos de Desarrollo</h2>
+						<h3>Con Sistemas de Virtualización</h3>
+						<img src="img/docker-vagrant.png">
+						<aside class="notes"> 
+							Como Vagrant y Docker, ambos son código abierto y multiplataforma.
+						</aside>
+					</section>
+					<section>
+						<h3>Ventajas</h3>
+						<ul>
+							<li>Misma configuración para todo el equipo</li>
+							<li>Independiente del Sistema Operativo</li>
+							<li>Semejante a los entornos de Test y Producción</li>
+							<li>Facilita trabajar con distintos proyectos</li>
+						</ul>
+						<aside class="notes">
+							Cuando se desarrolla en equipo, es muy importante que todos tengan el mismo entorno de desarrollo en sus máquinas locales. El mismo Sistema Operativo, las mismas versiones de las librerías... 
+							Para evitar incompatibilidades durante el desarrollo. También es muy importante que los entornos sean lo más semejantes posibles a la máquina de producción para evitar problemas cuando se despliegue el código.
+ 							Además en la actualidad es muy común trabajar en distintas tecnologías aún trabajando para la misma empresa. 
+
+ 							Para daros un ejemplo, en Badger trabajamos en Python, NodeJS y C#, en los servidores Heroku, Amazon y Azure. Y tan sólo tenemos un archivo de configuración para cada proyecto. Cuando necesitamos trabajar en un proyecto encendemos el entorno, si necesitamos trabajar en otro, encendemos el otro entorno.
+						</aside>
+					</section>
+					<section>
+						<a href="https://www.vagrantup.com/" target="_blank">
+							<img src="img/vagrant-logo.png">
+						</a>
+						<a href="https://github.com/mitchellh/vagrant" target="_blank">
+							<img src="img/github.png">
+						</a>
+						<p>Gestor de máquinas virtuales</p>
+
+						<aside class="notes">
+							En Badger usamos Vagrant.
+							Un Gestor de máquinas virtuales. Permite manejar varias máquinas virtuales.
+							El archivo de configuración Vagrantfile indica el proveedor (la máquina virtual como VirtualBox, VMWare, o incluso Docker), la configuración de la máquina virtual, más el código que aprovisiona a esta. 
+							Por ejemplo, se instalaría las dependencias, en Python se usa pip y se escriben en requirements.txt.
+							En el repositorio de esta presentación podéis ver un ejemplo de Vagrantfile.
+
+							Si clicais en el icono podéis acceder a un tutorial que explica cómo instalarlo.
+							https://styde.net/como-crear-un-entorno-de-desarrollo-virtual-con-vagrant/
+							Y las diferencias que tiene con Docker
+							http://www.miguelvilata.com/blog/docker-vs-vagrant-en-la-gestin-de-entornos-de-desarrollo
+						</aside>
+					</section>
+					<section>
+						<h3>Vagrant Box</h3>
+						<a href="http://www.vagrantbox.es/" target="_blank">
+							<img src="img/vagrantbox.png">
+						</a>
+						<aside class="notes">
+							Una vez instalada la máquina virtual y vagrant procederíamos a buscar el 
+							entorno adecuado para la aplicación.
+						</aside>
+					</section>
+					<section>
+						Vagrantfile + vagrant up + vagrant ssh
+					</section>
+					<section>
+						<a href="https://www.docker.com/" target="_blank">
+							<img src="img/docker-logo.png">
+						</a>
+						<a href="https://github.com/docker/docker" target="_blank">
+							<img src="img/github.png">
+						</a>
+						<p>Linux + Contenedores</p>
+						<aside class="notes">
+							A diferencia de Vagrant, Docker no pretente emular un sistema operativo completo, 
+							se basa en contenedores, permitiendoles compartir recursos entre varias aplicaciones.
+							En Docker solo se pueden ejecutar directamente aplicaciones basadas en linux.
+							Funciona nativamente en linux pero para hacerlo funcionar en Mac y Windows hace uso de una máquina virtual.
+							Al no ser un entorno totalmente independiente, es más rápido trabajar con Docker que con Vagrant.
+							Tutorial:
+							https://docs.docker.com/engine/getstarted/step_one/
+						</aside>
+					</section>
+					<section>
+						<h3>Docker Store</h3>
+						<a href="https://store.docker.com/" target="_blank">
+							<img src="img/docker-store.png">
+						</a>
+						<aside class="notes">
+							El requisito mínimo para ejecutar el entorno de desarrollo con Docker es instalar Docker Composer.
+							Una vez instalado pasaríamos a buscar la imagen adecuada para nuestro proyecto.
+						</aside>
+					</section>
+					<section>
+						Dockerfile + docker-compose.yml + docker-compose up
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Desarrollo Dirigido por Tests (TDD)</h2>
+						<aside class="notes">
+							Una vez preparado el entorno de desarrollo ya podríamos empezar a desarrollar.
+							En una metodología ágil, donde tratamos de hacer despliegues continuos, es muy importante
+							tener el código bien cubierto de tests. Por ese motivo, en Badger usamos TDD.
+						</aside>
+					</section>
+					<section>
+						<h3>TDD</h3>
+						<img src="img/tdd.jpg">
+						<aside class="notes">
+							En TDD se empieza por escribir el test, como no está implementado falla,
+							a continuación se escribe el código para que pase y finalmente se refactoriza para mejorar
+							su calidad.
+							Permite tener más clara la funcionalidad a desarrollar,
+							decidir el uso del código de forma clara y los contratos van a ser verdaderos cuando se ejecute.
+						</aside>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Sistema de Control de Versiones</h2>
+						<img src="img/vcs.png">
+						<aside class="notes">
+							Herramientas que registran los cambios hechos en un proyecto.
+							Contienen un histórico de los cambios realizados en cada archivo. 
+							Y permiten volver a un estado anterior del proyecto.
+							Las versiones se almacenan en un repositorio, normalmente en el servidor.
+							De esta forma varios programadores pueden trabajar en el mismo archivo a la vez. 
+						</aside>
+					</section>
+					<section>
+						<h3>Sistema de Control de Versiones</h3>
+						<img src="img/svn.png">
+						<img src="img/tfs.png">
+						<img src="img/git.png">
+						<aside class="notes">
+							Subversion es uno de los sistemas más legendarios.
+							Team Foundation Service es de microsoft.
+							Git es el más extendido. Desarrollado en el 2005 por el padre del kernel de Linux, Linus Torvals.
+						</aside>
+					</section>
+					<section>
+						<h3>Plataformas de Desarrollo Colaborativo</h3>
+						<img src="img/github2.png">
+						<img src="img/gitlab.svg">
+						<img src="img/bitbucket.png">
+						<aside class="notes">
+							En Badger usamos la plataforma Github para gestionar las versiones de nuestros proyectos.
+							Pero hay otras como GitLab y Bitbucket. 
+							Estas plataformas además de permitirnos hacer uso de GIT de forma más usable, 
+							nos permiten crear Issues, Pull Requests, etc.
+						</aside>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Revisiones de Código</h2>
+						<img src="img/codereview.png">
+						<aside class="notes">
+							Para desarrollar y mantener código de calidad es muy importante que el código se revise por uno o más desarrolladores, diferentes al autor. De esta forma se comprueba que se siguen los estándares de desarrollo de la organización, el código es legible, eficiente y no tiene errores visibles.
+
+						</aside>
+					</section>
+					<section>
+						<h3>Pull Request</h3>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Integración Continua</h2>
+						<aside class="notes">
+							Consiste en integrar los cambios hechos por un miembro del equipo en el momento que estén y pasen los tests.
+							Para ello hace falta una máquina externa que ejecute los tests, que indique cuales pasan y cuales no.
+							Una maquina virtual se descarga los archivos del repositorio, ejecuta los tests y crea un informe.
+							Por tanto, además del código del proyecto necesitará saber las dependencias para ejecutar los tests.
+						</aside>
+					</section>
+					<section>
+						<h3>Sistemas de Integración Continua</h3>
+						<aside class="notes">
+						Jenkins, Travis CI, Circle CI, Codeship...
+						Nosotros usamos Codeship, pero tambien usamos Jenkins porque nos permite mayor control.
+						Comparativa Travis CI, Circle CI, Codeship:
+						https://strongloop.com/strongblog/node-js-travis-circle-codeship-compare/
+						Lo mejor es probar distintos y elegir el que mejor se adapte a nuestro proyecto.
+						Jenkins está enfocado sobre todo en Java, pero nosotros lo usamos comunicandonos con una
+						máquina externa mediante ssh, esa máquina contiene el mismo entorno que el de desarrollo y
+						Jenkins ejecuta un script dentro de esa máquina que se encarga de descargar el código,
+						actualizar el entorno con las nuevas dependencias si es que han cambiado, y ejecutar los tests.
+						</aside>
+					</section>
+					<section>
+						<h3>Jenkins</h3>
+					</section>
+					<section>
+						<h3>Codeship</h3>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Despliegue continuo</h2>
+					</section>
+					<section>
+						<h2>PaaS</h2>
+					</section>
+					<section>
+						<h3>Codeship + GIT</h3>
+					</section>
+				</section>
+				<section>
+					<h2>Soporte del producto</h2>
+					<p>Zendesk</p>
+				</section>
+				<section>
+					<h2>Comunicación</h2>
+					<p>Email y Slack</p>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
