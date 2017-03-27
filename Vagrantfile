@@ -8,7 +8,7 @@ Vagrant.configure(2) do |config|
   config.vm.synced_folder ".", "/home/vagrant"
   
   config.vm.provider "virtualbox" do |vb|
-    vb.gui = false
+    vb.gui = true
     vb.memory = "1024"
   end
 

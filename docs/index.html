@@ -136,7 +136,7 @@
 					<section>
 						<h3>Ventajas</h3>
 						<ul>
-							<li>Misma configuración para todo el equipo</li>
+							<li>Misma configuración para todos los desarrolladores</li>
 							<li>Independiente del Sistema Operativo</li>
 							<li>Semejante a los entornos de Test y Producción</li>
 							<li>Facilita trabajar con distintos proyectos</li>
@@ -277,14 +277,32 @@
 					<section>
 						<h2>Integración Continua</h2>
 						<aside class="notes">
-							Consiste en integrar los cambios hechos por un miembro del equipo en el momento que estén y pasen los tests.
-							Para ello hace falta una máquina externa que ejecute los tests, que indique cuales pasan y cuales no.
-							Una maquina virtual se descarga los archivos del repositorio, ejecuta los tests y crea un informe.
-							Por tanto, además del código del proyecto necesitará saber las dependencias para ejecutar los tests.
+							Consiste en a través de una máquina externa, descargar los cambios subidos al VCS por un miembro del equipo, compilar el proyecto y ejecutar sus tests y a partir del resultado genera un informe. Permitiendo detectar los problemas de integración de forma continua.
 						</aside>
 					</section>
 					<section>
+						<h3>Ventajas CI</h3>
+						<ul>
+							<li>Detección y solución de problemas de integración.</li>
+							<li>Disponibilidad constante de una versión para pruebas, demos o lanzamientos.</li>
+							<li>Ejecución inmediata de las pruebas unitarias.</li>
+							<li>Monitorización continua de las métricas de calidad del proyecto.</li>
+						</ul>
+					</section>
+					<section>
 						<h3>Sistemas de Integración Continua</h3>
+						<a href="https://jenkins.io/" target="_blank">
+							<img src="img/jenkins.png">
+						</a>
+						<a href="https://travis-ci.org/" target="_blank">
+							<img src="img/travisci.png">
+						</a>
+						<a href="https://circleci.com/" target="_blank">
+							<img src="img/circleci.png">
+						</a>
+						<a href="https://codeship.com" target="_blank">
+							<img src="img/codeship.png">
+						</a>
 						<aside class="notes">
 							Jenkins, Travis CI, Circle CI, Codeship...
 							Nosotros usamos Codeship, pero tambien usamos Jenkins porque nos permite mayor control.
@@ -299,6 +317,7 @@
 					</section>
 					<section class="gallery-container">
 						<h3 class="fragment current-visible" data-fragment-index="0">Creamos Nuevo proyecto Codeship</h3>
+						<img class="fragment current-visible" data-fragment-index="0" src="img/codeship.jpg">
 						<img class="fragment current-visible" data-fragment-index="1" src="img/codeship-step1.png">
 						<p class="fragment current-visible" data-fragment-index="1">1. Seleccionamos la Plataforma del VCS</p>
 						<img class="fragment current-visible" data-fragment-index="2" src="img/codeship-step2.png">
@@ -319,6 +338,8 @@
 							4. Seleccionamos Codeship Basic
 							5. Configuramos el Proyecto
 							6. Y ya solo quedará hacer push y ver los informes!
+							Muy sencillo de usar, gratis, aplicación ideal para empezar.
+							Sin embargo si en vuestra aplicación trabajan muchos desarrolladores poco a poco el hecho de que no se ejecuten en paralelo será un impedimento, y para ello hará falta pagar. Además tiene 100 builds de máximo.
 						</aside>
 					</section>
 				</section>
@@ -332,12 +353,38 @@
 							DEJAR PARA LUEGO. DE ESTO PUEDO HABLAR CUANDO HABLE DE GITHUB TAMBIEN, PERO TIENE SENTIDO HABLAR CON INTEGRACION CONTINUA
 						</aside>
 					</section>
-					<section data-background-iframe="https://github.com/patrixd/despliegues-de-calidad">
+					<section>
+						<h3>Revisiones de Código</h3>
+						<img src="img/codereview-step1.png">
+					</section>
+					<section>
+						<h3>Revisiones de Código</h3>
+						<img src="img/codereview-step2.png">
+					</section>
+					<section>
+						<h3>Revisiones de Código</h3>
+						<img src="img/codereview-step3.png">
 					</section>
 				</section>
 				<section>
 					<section>
 						<h2>Despliegue continuo</h2>
+						<aside class="notes">
+
+							Continuous deployment can be thought of as an extension of continuous integration, aiming at minimizing lead time, the time elapsed between development writing one new line of code and this new code being used by live users, in production.
+To achieve continuous deployment, the team relies on infrastructure that automates and instruments the various steps leading up to deployment, so that after each integration successfully meeting these release criteria, the live application is updated with new code.
+Instrumentation is needed to ensure that any suggestion of lowered quality results in aborting the deployment process, or rolling back the new features, and triggers human intervention.
+
+
+							Continuous Delivery vs Continuous Deployment
+							https://puppet.com/blog/continuous-delivery-vs-continuous-deployment-what-s-diff
+						</aside>
+					</section>
+					<section>
+						<h3>Ventajas Despliegue Continuo</h3>
+						earlier return on investment for each feature after it is developed, which reduces the need for large capital investments
+earlier feedback from users on each new feature as it is released to production, which affords techniques such as parallel (or A/B) testing to determine which of two possible implementation is preferred by users
+
 					</section>
 					<section>
 						<h2>PaaS</h2>
@@ -349,8 +396,6 @@
 				<section>
 					<h2>Soporte del producto</h2>
 					<p>Zendesk</p>
-				</section>
-				<section>
 					<h2>Comunicación</h2>
 					<p>Email y Slack</p>
 				</section>
