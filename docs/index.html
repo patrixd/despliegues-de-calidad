@@ -20,6 +20,15 @@
 			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
+		<style type="text/css">
+			.gallery-container .current-visible:not(.current-fragment) {
+			    display: none !important;
+			}
+			.invisible {
+				opacity: 0;
+    			visibility: hidden;
+			}
+		</style>
 	</head>
 	<body>
 		<div class="reveal">
@@ -266,19 +275,6 @@
 				</section>
 				<section>
 					<section>
-						<h2>Revisiones de Código</h2>
-						<img src="img/codereview.png">
-						<aside class="notes">
-							Para desarrollar y mantener código de calidad es muy importante que el código se revise por uno o más desarrolladores, diferentes al autor. De esta forma se comprueba que se siguen los estándares de desarrollo de la organización, el código es legible, eficiente y no tiene errores visibles.
-
-						</aside>
-					</section>
-					<section>
-						<h3>Pull Request</h3>
-					</section>
-				</section>
-				<section>
-					<section>
 						<h2>Integración Continua</h2>
 						<aside class="notes">
 							Consiste en integrar los cambios hechos por un miembro del equipo en el momento que estén y pasen los tests.
@@ -290,22 +286,53 @@
 					<section>
 						<h3>Sistemas de Integración Continua</h3>
 						<aside class="notes">
-						Jenkins, Travis CI, Circle CI, Codeship...
-						Nosotros usamos Codeship, pero tambien usamos Jenkins porque nos permite mayor control.
-						Comparativa Travis CI, Circle CI, Codeship:
-						https://strongloop.com/strongblog/node-js-travis-circle-codeship-compare/
-						Lo mejor es probar distintos y elegir el que mejor se adapte a nuestro proyecto.
-						Jenkins está enfocado sobre todo en Java, pero nosotros lo usamos comunicandonos con una
-						máquina externa mediante ssh, esa máquina contiene el mismo entorno que el de desarrollo y
-						Jenkins ejecuta un script dentro de esa máquina que se encarga de descargar el código,
-						actualizar el entorno con las nuevas dependencias si es que han cambiado, y ejecutar los tests.
+							Jenkins, Travis CI, Circle CI, Codeship...
+							Nosotros usamos Codeship, pero tambien usamos Jenkins porque nos permite mayor control.
+							Comparativa Travis CI, Circle CI, Codeship:
+							https://strongloop.com/strongblog/node-js-travis-circle-codeship-compare/
+							Lo mejor es probar distintos y elegir el que mejor se adapte a nuestro proyecto.
+							Jenkins está enfocado sobre todo en Java, pero nosotros lo usamos comunicandonos con una
+							máquina externa mediante ssh, esa máquina contiene el mismo entorno que el de desarrollo y
+							Jenkins ejecuta un script dentro de esa máquina que se encarga de descargar el código,
+							actualizar el entorno con las nuevas dependencias si es que han cambiado, y ejecutar los tests.
 						</aside>
 					</section>
-					<section>
-						<h3>Jenkins</h3>
+					<section class="gallery-container">
+						<h3 class="fragment current-visible" data-fragment-index="0">Creamos Nuevo proyecto Codeship</h3>
+						<img class="fragment current-visible" data-fragment-index="1" src="img/codeship-step1.png">
+						<p class="fragment current-visible" data-fragment-index="1">1. Seleccionamos la Plataforma del VCS</p>
+						<img class="fragment current-visible" data-fragment-index="2" src="img/codeship-step2.png">
+						<p class="fragment current-visible" data-fragment-index="2">2. Conectamos Codeship con la Plataforma</p>
+						<img class="fragment current-visible" data-fragment-index="3" src="img/codeship-step3.png">
+						<p class="fragment current-visible" data-fragment-index="3">3. Seleccionamos Codeship Basic</p>
+						<img class="fragment current-visible" data-fragment-index="4" src="img/codeship-step4-1.png">
+						<p class="fragment current-visible" data-fragment-index="4">4. Configuramos el Setup del Proyecto</p>
+						<img class="fragment current-visible" data-fragment-index="5" src="img/codeship-step4-2.png">
+						<p class="fragment current-visible" data-fragment-index="5">4. Configuramos los Tests del Proyecto</p>
+						<img class="fragment current-visible" data-fragment-index="6" src="img/codeship-step5.png">
+						<p class="fragment current-visible" data-fragment-index="6">5. Sistema CI listo!</p>
+						<img class="invisible" src="img/codeship-step1.png">
+						<aside class="notes">
+							1. Crear proyecto nuevo
+							2. Conectar con Github
+							3. Dar permisos a la cuenta
+							4. Seleccionamos Codeship Basic
+							5. Configuramos el Proyecto
+							6. Y ya solo quedará hacer push y ver los informes!
+						</aside>
 					</section>
+				</section>
+				<section>
 					<section>
-						<h3>Codeship</h3>
+						<h2>Revisiones de Código</h2>
+						<img src="img/codereview.png">
+						<aside class="notes">
+							Para desarrollar y mantener código de calidad es muy importante que el código se revise por uno o más desarrolladores, diferentes al autor. De esta forma se comprueba que se siguen los estándares de desarrollo de la organización, el código es legible, eficiente y no tiene errores visibles.
+
+							DEJAR PARA LUEGO. DE ESTO PUEDO HABLAR CUANDO HABLE DE GITHUB TAMBIEN, PERO TIENE SENTIDO HABLAR CON INTEGRACION CONTINUA
+						</aside>
+					</section>
+					<section data-background-iframe="https://github.com/patrixd/despliegues-de-calidad">
 					</section>
 				</section>
 				<section>
