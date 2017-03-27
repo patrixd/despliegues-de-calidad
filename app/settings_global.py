@@ -37,6 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    # Project apps
+    'home',
 ]
 
 MIDDLEWARE = [
@@ -107,3 +110,5 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
 STATIC_URL = '/static/'
+
+ENVIRONMENT_NAME = os.environ.get('ENVIRONMENT_NAME')

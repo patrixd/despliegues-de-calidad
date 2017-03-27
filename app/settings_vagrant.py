@@ -14,3 +14,5 @@ DATABASES = {
         'PORT': 5432,
     }
 }
+
+ENVIRONMENT_NAME = 'Vagrant'

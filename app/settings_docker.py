@@ -14,3 +14,4 @@ DATABASES = {
     }
 }
 
+ENVIRONMENT_NAME = 'Docker'
