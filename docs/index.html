@@ -316,7 +316,7 @@
 						</aside>
 					</section>
 					<section class="gallery-container">
-						<h3 class="fragment current-visible" data-fragment-index="0">Creamos Nuevo proyecto Codeship</h3>
+						<h3>Nuevo proyecto Codeship</h3>
 						<img class="fragment current-visible" data-fragment-index="0" src="img/codeship.jpg">
 						<img class="fragment current-visible" data-fragment-index="1" src="img/codeship-step1.png">
 						<p class="fragment current-visible" data-fragment-index="1">1. Seleccionamos la Plataforma del VCS</p>
@@ -370,11 +370,12 @@
 					<section>
 						<h2>Despliegue continuo</h2>
 						<aside class="notes">
-
-							Continuous deployment can be thought of as an extension of continuous integration, aiming at minimizing lead time, the time elapsed between development writing one new line of code and this new code being used by live users, in production.
-To achieve continuous deployment, the team relies on infrastructure that automates and instruments the various steps leading up to deployment, so that after each integration successfully meeting these release criteria, the live application is updated with new code.
-Instrumentation is needed to ensure that any suggestion of lowered quality results in aborting the deployment process, or rolling back the new features, and triggers human intervention.
-
+							Extensión de la Integración Continua, 
+							tiene como objetivo minimizar la cantidad de tiempo desde la 
+							primera linea de código hasta que puede ser usado por usuarios
+							reales en producción.
+							Para poder hacerlo, el equpo cuenta con herramientas que automizan el despliegue. También se requiere tener las herramientas necesarias para abortar el despliegue, volver a un estado anterior y notificar cuando 
+							el despliegue haya finalizado.
 
 							Continuous Delivery vs Continuous Deployment
 							https://puppet.com/blog/continuous-delivery-vs-continuous-deployment-what-s-diff
@@ -382,22 +383,37 @@ Instrumentation is needed to ensure that any suggestion of lowered quality resul
 					</section>
 					<section>
 						<h3>Ventajas Despliegue Continuo</h3>
-						earlier return on investment for each feature after it is developed, which reduces the need for large capital investments
-earlier feedback from users on each new feature as it is released to production, which affords techniques such as parallel (or A/B) testing to determine which of two possible implementation is preferred by users
-
+						<ul>
+							<li>Incrementos de productos más fluidos</li>
+							<li>Feedback de usuarios más temprano</li>
+							<li>Proceso automatizado evitando error humano</li>
+							<li>Cualquier miembro del equipo puede hacer el despliegue</li>
+						</ul>
 					</section>
-					<section>
-						<h2>PaaS</h2>
-					</section>
-					<section>
-						<h3>Codeship + GIT</h3>
+					<section class="gallery-container">
+						<h3>Despliegue Continuo con Codeship</h3>						
+						<img class="fragment current-visible" data-fragment-index="0" src="img/heroku-new-app.png">		
+						<p class="fragment current-visible" data-fragment-index="0">1. Creamos nueva aplicación en Heroku</p>
+						<img class="fragment current-visible" data-fragment-index="1" src="img/ci-step1.png">
+						<p class="fragment current-visible" data-fragment-index="1">2. Configuramos el Deployment en Codeship</p>
+						<img class="fragment current-visible" data-fragment-index="2" src="img/cd-step2.png">
+						<p class="fragment current-visible" data-fragment-index="2">3. Configuramos</p>
+						<img class="invisible" src="img/cd-step2.png">
+						<img class="fragment current-visible" data-fragment-index="3" src="img/cd-step3.png">
+						<p class="fragment current-visible" data-fragment-index="3">3. Configuramos</p>
+						<img class="invisible" src="img/cd-step2.png">
 					</section>
 				</section>
 				<section>
-					<h2>Soporte del producto</h2>
-					<p>Zendesk</p>
-					<h2>Comunicación</h2>
-					<p>Email y Slack</p>
+					<h2>Una vez desplegada...</h2>
+					<ul>
+						<li>Soporte a usuarios</li>
+						<li>Comunicación</li>
+					</ul>
+					<aside class="notes">
+						Soporte a usuarios y técnico: Zendesk
+						Comunicación dentro de la organización: Email y Slack
+					</aside>
 				</section>
 			</div>
 		</div>
