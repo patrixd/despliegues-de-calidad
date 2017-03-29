@@ -7,10 +7,13 @@
 		<title>reveal.js</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+		<link rel="stylesheet" href="css/theme/sky.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<link rel="stylesheet" href="css/main.css">
 
 		<!-- Printing and PDF exports -->
 		<script>
@@ -32,8 +35,47 @@
 	</head>
 	<body>
 		<div class="reveal">
-			<div class="slides">
-				<section>
+			<div class="slides">				
+				<section data-state="animated-clouds"><p>&nbsp;</p><p>&nbsp;</p>
+					<h2 id="no-es-s-lo-texto-y-enlaces">Despliega código en la nube de forma Ágil</h2>
+					<h3 id="la-web-no-tiene-l-mites">Buenas prácticas y Herramientas</h3>
+                    <a href="https://github.com/patrixd/despliega-con-calidad" target="_blank">
+                        <img src="img/github_cat.png" alt="github image">
+                    </a>
+				</section>
+				<section data-background="img/foto2.jpg">
+					<div class="row">
+						<div class="hello col-sm-10">
+							<div class="name">
+								Patricia Juárez Muñoz
+							</div>
+							<div class="category text-faded">
+							    Ingeniera Software Senior<br>
+								<a href="http://develagora.com" target="_blank" class="develagora" alt="Develagora">&nbsp;</a>&nbsp;&nbsp;
+	                            <a href="https://twitter.com/ccsakuweb" target="_blank" class="twitter" alt="Follow me on Twitter!">&nbsp;</a>&nbsp;&nbsp;
+								<a href="http://www.linkedin.com/in/patriciajuarezmunoz" target="_blank" class="linkedin" alt="Contact me on Linkedin!">&nbsp;</a>
+							</div>
+							<hr class="light">
+							<p class="text-faded">
+							    Licenciada en Ingeniería Informática en la Universidad de Granada (España). <br>
+							    Experta en el desarrollo de aplicaciones web y móviles.<br><br>
+							    2007-2016 Freelance en empresas como 3DVista y Axesor.<br>
+							    2016-Actualidad Senior Software Engineer en Badger Maps.
+							</p>
+						</div>
+					</div>
+				</section>
+				<section data-state="badger-sky">
+					<img src="img/badger-logo2.png" alt="badger logo" />
+					<p>Startup californiana, con sede en San Francisco y centro de desarrollo en Granada.</p>
+					<p>Patrocinadores de la Oficina de Software Libre.</p>
+					<img src="img/devices.png" alt="badger maps">
+					<aside class="notes">
+					- Desarrollamos la mejor aplicación para representantes de ventas. <br>
+					- El objetivo de la charla es mostraros los procesos que empleamos en Badger que nos permiten desplegar software de calidad de forma continua.<br>
+					</aside>
+				</section>
+				<section data-state="devops-sky">
 					<section>
 						<h2>
 							DevOps
@@ -101,7 +143,10 @@
 						</aside>
 					</section>
 					<section>
-						<img src="img/culture.png"/>
+						<h3>
+							DevOps
+						</h3>
+						<img src="img/culture.png" class="devops-culture-img"/>
 						<aside class="notes">
 							DevOps requiere un cambio cultural hacia la colaboración, la comunicación, y
 							la completa integración entre las antiguas áreas de desarrollo y sistemas.
@@ -124,17 +169,18 @@
 						pero ¿por donde empezamos para poder desplegar código de calidad?
 					</aside>
 				</section>
-				<section>
+				<section data-state="entornos-sky">
 					<section>
-						<h2>Entornos de Desarrollo</h2>
-						<h3>Con Sistemas de Virtualización</h3>
+						<h3>Entornos de Desarrollo</h3>
+						<h4>Sistemas de Virtualización</h4>
 						<img src="img/docker-vagrant.png">
 						<aside class="notes"> 
 							Como Vagrant y Docker, ambos son código abierto y multiplataforma.
 						</aside>
 					</section>
 					<section>
-						<h3>Ventajas</h3>
+						<h3>Sistemas de Virtualización</h3>
+						<h4>Ventajas</h4>
 						<ul>
 							<li>Misma configuración para todos los desarrolladores</li>
 							<li>Independiente del Sistema Operativo</li>
@@ -153,7 +199,7 @@
 						<a href="https://www.vagrantup.com/" target="_blank">
 							<img src="img/vagrant-logo.png">
 						</a>
-						<a href="https://github.com/mitchellh/vagrant" target="_blank">
+						<a href="https://github.com/mitchellh/vagrant" target="_blank" class="repo">
 							<img src="img/github.png">
 						</a>
 						<p>Gestor de máquinas virtuales</p>
@@ -182,13 +228,28 @@
 						</aside>
 					</section>
 					<section>
-						Vagrantfile + vagrant up + vagrant ssh
+						<h4>Ejecución con Vagrant</h4>
+						<div class="row">
+							<div class="col-sm-10 col-sm-offset-2">
+								<a href="https://github.com/patrixd/despliegues-de-calidad" target="_blank">
+									<img src="img/vagrantfile.png">
+								</a>
+							</div>
+							<div class="col-sm-4 vagrant-command">
+								<pre class="html-preview-code">
+									<code class="hljs bash">
+vagrant up
+vagrant ssh
+									</code>
+								</pre>
+							</div>
+						</div>						
 					</section>
 					<section>
 						<a href="https://www.docker.com/" target="_blank">
-							<img src="img/docker-logo.png">
+							<img src="img/docker-logo.png" class="docker-img">
 						</a>
-						<a href="https://github.com/docker/docker" target="_blank">
+						<a href="https://github.com/docker/docker" target="_blank" class="docker-repo repo">
 							<img src="img/github.png">
 						</a>
 						<p>Linux + Contenedores</p>
@@ -213,12 +274,27 @@
 						</aside>
 					</section>
 					<section>
-						Dockerfile + docker-compose.yml + docker-compose up
+						<h4>Ejecución con Docker</h4>
+						<div class="row">
+							<div class="col-sm-10 col-sm-offset-2">
+								<a href="https://github.com/patrixd/despliegues-de-calidad" target="_blank">
+									<img src="img/dockerfile.png">
+								</a>
+							</div>
+							<div class="col-sm-4 vagrant-command">
+								<pre class="html-preview-code">
+									<code class="hljs bash">
+docker-compose up
+									</code>
+								</pre>
+							</div>
+						</div>	
 					</section>
 				</section>
-				<section>
+				<section data-state="tdd-sky">
 					<section>
-						<h2>Desarrollo Dirigido por Tests (TDD)</h2>
+						<h3>Desarrollo Dirigido <br>por Tests</h3>
+						<h4>TDD</h4>
 						<aside class="notes">
 							Una vez preparado el entorno de desarrollo ya podríamos empezar a desarrollar.
 							En una metodología ágil, donde tratamos de hacer despliegues continuos, es muy importante
@@ -227,7 +303,7 @@
 					</section>
 					<section>
 						<h3>TDD</h3>
-						<img src="img/tdd.jpg">
+						<img src="img/tdd.jpg" class="tdd-img">
 						<aside class="notes">
 							En TDD se empieza por escribir el test, como no está implementado falla,
 							a continuación se escribe el código para que pase y finalmente se refactoriza para mejorar
@@ -239,7 +315,7 @@
 				</section>
 				<section>
 					<section>
-						<h2>Sistema de Control de Versiones</h2>
+						<h3>Sistema de Control de Versiones</h3>
 						<img src="img/vcs.png">
 						<aside class="notes">
 							Herramientas que registran los cambios hechos en un proyecto.
@@ -250,10 +326,8 @@
 						</aside>
 					</section>
 					<section>
-						<h3>Sistema de Control de Versiones</h3>
-						<img src="img/svn.png">
-						<img src="img/tfs.png">
-						<img src="img/git.png">
+						<h3>Sistemas de Control de Versiones</h3>
+						<img src="img/vcs-samples.png" class="vcs-samples-img">
 						<aside class="notes">
 							Subversion es uno de los sistemas más legendarios.
 							Team Foundation Service es de microsoft.
@@ -262,9 +336,7 @@
 					</section>
 					<section>
 						<h3>Plataformas de Desarrollo Colaborativo</h3>
-						<img src="img/github2.png">
-						<img src="img/gitlab.svg">
-						<img src="img/bitbucket.png">
+						<img src="img/vcs-platforms.png" class="vcs-samples-img">
 						<aside class="notes">
 							En Badger usamos la plataforma Github para gestionar las versiones de nuestros proyectos.
 							Pero hay otras como GitLab y Bitbucket. 
@@ -291,18 +363,8 @@
 					</section>
 					<section>
 						<h3>Sistemas de Integración Continua</h3>
-						<a href="https://jenkins.io/" target="_blank">
-							<img src="img/jenkins.png">
-						</a>
-						<a href="https://travis-ci.org/" target="_blank">
-							<img src="img/travisci.png">
-						</a>
-						<a href="https://circleci.com/" target="_blank">
-							<img src="img/circleci.png">
-						</a>
-						<a href="https://codeship.com" target="_blank">
-							<img src="img/codeship.png">
-						</a>
+    					<span class="glyphicon glyphicon-question-sign" data-toggle="modal" data-target="#modal-ci-referencias"></span>
+						<img src="img/ci.png" class="mid-img">
 						<aside class="notes">
 							Jenkins, Travis CI, Circle CI, Codeship...
 							Nosotros usamos Codeship, pero tambien usamos Jenkins porque nos permite mayor control.
@@ -353,17 +415,12 @@
 							DEJAR PARA LUEGO. DE ESTO PUEDO HABLAR CUANDO HABLE DE GITHUB TAMBIEN, PERO TIENE SENTIDO HABLAR CON INTEGRACION CONTINUA
 						</aside>
 					</section>
-					<section>
-						<h3>Revisiones de Código</h3>
-						<img src="img/codereview-step1.png">
-					</section>
-					<section>
-						<h3>Revisiones de Código</h3>
-						<img src="img/codereview-step2.png">
-					</section>
-					<section>
-						<h3>Revisiones de Código</h3>
-						<img src="img/codereview-step3.png">
+					<section class="gallery-container codereview">
+						<h3>Revisiones de Código</h3>				
+						<img class="fragment current-visible ci-step1" data-fragment-index="0" src="img/codereview-step1.png">				
+						<img class="fragment current-visible ci-step2" data-fragment-index="1" src="img/codereview-step2.png">				
+						<img class="fragment current-visible ci-step3" data-fragment-index="2" src="img/codereview-step3.png">		
+						<img class="invisible" data-fragment-index="2" src="img/codereview-step3.png">	
 					</section>
 				</section>
 				<section>
@@ -391,15 +448,14 @@
 						</ul>
 					</section>
 					<section class="gallery-container">
-						<h3>Despliegue Continuo con Codeship</h3>						
+						<h4>Despliegue Continuo con Codeship</h4>						
 						<img class="fragment current-visible" data-fragment-index="0" src="img/heroku-new-app.png">		
 						<p class="fragment current-visible" data-fragment-index="0">1. Creamos nueva aplicación en Heroku</p>
 						<img class="fragment current-visible" data-fragment-index="1" src="img/ci-step1.png">
 						<p class="fragment current-visible" data-fragment-index="1">2. Configuramos el Deployment en Codeship</p>
-						<img class="fragment current-visible" data-fragment-index="2" src="img/cd-step2.png">
+						<img class="fragment current-visible cd-step2" data-fragment-index="2" src="img/cd-step2.png">
 						<p class="fragment current-visible" data-fragment-index="2">3. Configuramos</p>
-						<img class="invisible" src="img/cd-step2.png">
-						<img class="fragment current-visible" data-fragment-index="3" src="img/cd-step3.png">
+						<img class="fragment current-visible cd-step3" data-fragment-index="3" src="img/cd-step3.png">
 						<p class="fragment current-visible" data-fragment-index="3">3. Configuramos</p>
 						<img class="invisible" src="img/cd-step2.png">
 					</section>
@@ -417,6 +473,37 @@
 				</section>
 			</div>
 		</div>
+        <div class="modal fade" id="modal-ci-referencias" tabindex="-1" role="dialog">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-body">
+                  <h4>Referencias CI:</h4>
+                  <ul>
+                      	<li>
+							<a href="https://jenkins.io/" target="_blank">
+								Jenkins
+							</a>
+						</li>
+                      	<li>
+							<a href="https://travis-ci.org/" target="_blank">
+								Travis CI
+							</a>
+						</li>
+                      	<li>
+							<a href="https://circleci.com/" target="_blank">
+								Circle CI
+							</a>
+						</li>
+                      	<li>
+							<a href="https://codeship.com" target="_blank">
+								Codeship
+							</a>
+						</li>
+                  </ul>
+              </div>
+            </div>
+          </div>
+        </div>
 
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.js"></script>
@@ -435,5 +522,7 @@
 				]
 			});
 		</script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	</body>
 </html>
