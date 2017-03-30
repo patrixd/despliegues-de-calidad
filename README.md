@@ -1,6 +1,6 @@
 # Despliega código en la nube de forma Ágil
 ## BUENAS PRÁCTICAS Y HERRAMIENTAS
-Presentación de despliegues ágiles y procesos para el meetup [Día D: Desarrollo, DevOps, Datos, Diseño](https://www.meetup.com/es-ES/Granada-Geek/events/238322520/) por [Patricia Juarez Muñoz](http://develagora.com)
+Presentación de despliegues ágiles y procesos para el meetup [Día D: Desarrollo, DevOps, Datos, Diseño](https://www.meetup.com/es-ES/Granada-Geek/events/238322520/) por [Patricia Juarez Muñoz](https://twitter.com/ccsakuweb)
 
 
 ### Autor
