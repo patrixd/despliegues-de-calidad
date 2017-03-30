@@ -118,3 +118,5 @@ STATICFILES_DIRS = (
     os.path.join(PROJECT_ROOT, 'static'),
 )
 
+ALLOWED_HOSTS = ['*']
+
