@@ -4,7 +4,7 @@ Presentación de despliegues ágiles y procesos para el meetup [Día D: Desarrol
 
 
 ### Autor
-[Patricia Juarez Muñoz](http://develagora.com) ([@ccsakuweb](http://twitter.com/ccsakuweb)). Ingeniera Software Senior en [BadgerMaps INC](http://badgermapping.com)
+Patricia Juarez Muñoz ([@ccsakuweb](http://twitter.com/ccsakuweb)). Ingeniera Software Senior en [BadgerMaps INC](http://badgermapping.com) patrocinadores del evento.
 
 ## Contenido
 Aplicación de ejemplo Django para distintos entornos.
