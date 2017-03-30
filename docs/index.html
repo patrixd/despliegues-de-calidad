@@ -7,10 +7,13 @@
 		<title>reveal.js</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+		<link rel="stylesheet" href="css/theme/sky.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<link rel="stylesheet" href="css/main.css">
 
 		<!-- Printing and PDF exports -->
 		<script>
@@ -20,11 +23,59 @@
 			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
+		<style type="text/css">
+			.gallery-container .current-visible:not(.current-fragment) {
+			    display: none !important;
+			}
+			.invisible {
+				opacity: 0;
+    			visibility: hidden;
+			}
+		</style>
 	</head>
 	<body>
 		<div class="reveal">
-			<div class="slides">
-				<section>
+			<div class="slides">				
+				<section data-state="animated-clouds"><p>&nbsp;</p><p>&nbsp;</p>
+					<h2 id="no-es-s-lo-texto-y-enlaces">Despliega código en la nube de forma Ágil</h2>
+					<h3 id="la-web-no-tiene-l-mites">Buenas prácticas y Herramientas</h3>
+                    <a href="https://github.com/patrixd/despliega-con-calidad" target="_blank">
+                        <img src="img/github_cat.png" alt="github image">
+                    </a>
+				</section>
+				<section data-background="img/foto2.jpg">
+					<div class="row">
+						<div class="hello col-sm-10">
+							<div class="name">
+								Patricia Juárez Muñoz
+							</div>
+							<div class="category text-faded">
+							    Ingeniera Software Senior<br>
+								<a href="http://develagora.com" target="_blank" class="develagora" alt="Develagora">&nbsp;</a>&nbsp;&nbsp;
+	                            <a href="https://twitter.com/ccsakuweb" target="_blank" class="twitter" alt="Follow me on Twitter!">&nbsp;</a>&nbsp;&nbsp;
+								<a href="http://www.linkedin.com/in/patriciajuarezmunoz" target="_blank" class="linkedin" alt="Contact me on Linkedin!">&nbsp;</a>
+							</div>
+							<hr class="light">
+							<p class="text-faded">
+							    Licenciada en Ingeniería Informática en la Universidad de Granada (España). <br>
+							    Experta en el desarrollo de aplicaciones web y móviles.<br><br>
+							    2007-2016 Freelance en empresas como 3DVista y Axesor.<br>
+							    2016-Actualidad Senior Software Engineer en Badger Maps.
+							</p>
+						</div>
+					</div>
+				</section>
+				<section data-state="badger-sky">
+					<img src="img/badger-logo2.png" alt="badger logo" />
+					<p>Startup californiana, con sede en San Francisco y centro de desarrollo en Granada.</p>
+					<p>Patrocinadores de la Oficina de Software Libre.</p>
+					<img src="img/devices.png" alt="badger maps">
+					<aside class="notes">
+					- Desarrollamos la mejor aplicación para representantes de ventas. <br>
+					- El objetivo de la charla es mostraros los procesos que empleamos en Badger que nos permiten desplegar software de calidad de forma continua.<br>
+					</aside>
+				</section>
+				<section data-state="devops-sky">
 					<section>
 						<h2>
 							DevOps
@@ -92,7 +143,10 @@
 						</aside>
 					</section>
 					<section>
-						<img src="img/culture.png"/>
+						<h3>
+							DevOps
+						</h3>
+						<img src="img/culture.png" class="devops-culture-img"/>
 						<aside class="notes">
 							DevOps requiere un cambio cultural hacia la colaboración, la comunicación, y
 							la completa integración entre las antiguas áreas de desarrollo y sistemas.
@@ -115,19 +169,20 @@
 						pero ¿por donde empezamos para poder desplegar código de calidad?
 					</aside>
 				</section>
-				<section>
+				<section data-state="entornos-sky">
 					<section>
-						<h2>Entornos de Desarrollo</h2>
-						<h3>Con Sistemas de Virtualización</h3>
+						<h3>Entornos de Desarrollo</h3>
+						<h4>Sistemas de Virtualización</h4>
 						<img src="img/docker-vagrant.png">
 						<aside class="notes"> 
 							Como Vagrant y Docker, ambos son código abierto y multiplataforma.
 						</aside>
 					</section>
 					<section>
-						<h3>Ventajas</h3>
+						<h3>Sistemas de Virtualización</h3>
+						<h4>Ventajas</h4>
 						<ul>
-							<li>Misma configuración para todo el equipo</li>
+							<li>Misma configuración para todos los desarrolladores</li>
 							<li>Independiente del Sistema Operativo</li>
 							<li>Semejante a los entornos de Test y Producción</li>
 							<li>Facilita trabajar con distintos proyectos</li>
@@ -144,7 +199,7 @@
 						<a href="https://www.vagrantup.com/" target="_blank">
 							<img src="img/vagrant-logo.png">
 						</a>
-						<a href="https://github.com/mitchellh/vagrant" target="_blank">
+						<a href="https://github.com/mitchellh/vagrant" target="_blank" class="repo">
 							<img src="img/github.png">
 						</a>
 						<p>Gestor de máquinas virtuales</p>
@@ -173,13 +228,28 @@
 						</aside>
 					</section>
 					<section>
-						Vagrantfile + vagrant up + vagrant ssh
+						<h4>Ejecución con Vagrant</h4>
+						<div class="row">
+							<div class="col-sm-10 col-sm-offset-2">
+								<a href="https://github.com/patrixd/despliegues-de-calidad" target="_blank">
+									<img src="img/vagrantfile.png">
+								</a>
+							</div>
+							<div class="col-sm-4 vagrant-command">
+								<pre class="html-preview-code">
+									<code class="hljs bash">
+vagrant up
+vagrant ssh
+									</code>
+								</pre>
+							</div>
+						</div>						
 					</section>
 					<section>
 						<a href="https://www.docker.com/" target="_blank">
-							<img src="img/docker-logo.png">
+							<img src="img/docker-logo.png" class="docker-img">
 						</a>
-						<a href="https://github.com/docker/docker" target="_blank">
+						<a href="https://github.com/docker/docker" target="_blank" class="docker-repo repo">
 							<img src="img/github.png">
 						</a>
 						<p>Linux + Contenedores</p>
@@ -204,12 +274,27 @@
 						</aside>
 					</section>
 					<section>
-						Dockerfile + docker-compose.yml + docker-compose up
+						<h4>Ejecución con Docker</h4>
+						<div class="row">
+							<div class="col-sm-10 col-sm-offset-2">
+								<a href="https://github.com/patrixd/despliegues-de-calidad" target="_blank">
+									<img src="img/dockerfile.png">
+								</a>
+							</div>
+							<div class="col-sm-4 vagrant-command">
+								<pre class="html-preview-code">
+									<code class="hljs bash">
+docker-compose up
+									</code>
+								</pre>
+							</div>
+						</div>	
 					</section>
 				</section>
-				<section>
+				<section data-state="tdd-sky">
 					<section>
-						<h2>Desarrollo Dirigido por Tests (TDD)</h2>
+						<h3>Desarrollo Dirigido <br>por Tests</h3>
+						<h4>TDD</h4>
 						<aside class="notes">
 							Una vez preparado el entorno de desarrollo ya podríamos empezar a desarrollar.
 							En una metodología ágil, donde tratamos de hacer despliegues continuos, es muy importante
@@ -218,7 +303,7 @@
 					</section>
 					<section>
 						<h3>TDD</h3>
-						<img src="img/tdd.jpg">
+						<img src="img/tdd.jpg" class="tdd-img">
 						<aside class="notes">
 							En TDD se empieza por escribir el test, como no está implementado falla,
 							a continuación se escribe el código para que pase y finalmente se refactoriza para mejorar
@@ -230,7 +315,7 @@
 				</section>
 				<section>
 					<section>
-						<h2>Sistema de Control de Versiones</h2>
+						<h3>Sistema de Control de Versiones</h3>
 						<img src="img/vcs.png">
 						<aside class="notes">
 							Herramientas que registran los cambios hechos en un proyecto.
@@ -241,10 +326,8 @@
 						</aside>
 					</section>
 					<section>
-						<h3>Sistema de Control de Versiones</h3>
-						<img src="img/svn.png">
-						<img src="img/tfs.png">
-						<img src="img/git.png">
+						<h3>Sistemas de Control de Versiones</h3>
+						<img src="img/vcs-samples.png" class="vcs-samples-img">
 						<aside class="notes">
 							Subversion es uno de los sistemas más legendarios.
 							Team Foundation Service es de microsoft.
@@ -253,9 +336,7 @@
 					</section>
 					<section>
 						<h3>Plataformas de Desarrollo Colaborativo</h3>
-						<img src="img/github2.png">
-						<img src="img/gitlab.svg">
-						<img src="img/bitbucket.png">
+						<img src="img/vcs-platforms.png" class="vcs-samples-img">
 						<aside class="notes">
 							En Badger usamos la plataforma Github para gestionar las versiones de nuestros proyectos.
 							Pero hay otras como GitLab y Bitbucket. 
@@ -266,69 +347,179 @@
 				</section>
 				<section>
 					<section>
+						<h2>Integración Continua</h2>
+						<aside class="notes">
+							Consiste en a través de una máquina externa, descargar los cambios subidos al VCS por un miembro del equipo, compilar el proyecto y ejecutar sus tests y a partir del resultado genera un informe. Permitiendo detectar los problemas de integración de forma continua.
+						</aside>
+					</section>
+					<section>
+						<h3>Ventajas CI</h3>
+						<ul>
+							<li>Detección y solución de problemas de integración.</li>
+							<li>Disponibilidad constante de una versión para pruebas, demos o lanzamientos.</li>
+							<li>Ejecución inmediata de las pruebas unitarias.</li>
+							<li>Monitorización continua de las métricas de calidad del proyecto.</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Sistemas de Integración Continua</h3>
+    					<span class="glyphicon glyphicon-question-sign" data-toggle="modal" data-target="#modal-ci-referencias"></span>
+						<img src="img/ci.png" class="mid-img">
+						<aside class="notes">
+							Jenkins, Travis CI, Circle CI, Codeship...
+							Nosotros usamos Codeship, pero tambien usamos Jenkins porque nos permite mayor control.
+							Comparativa Travis CI, Circle CI, Codeship:
+							https://strongloop.com/strongblog/node-js-travis-circle-codeship-compare/
+							Lo mejor es probar distintos y elegir el que mejor se adapte a nuestro proyecto.
+							Jenkins está enfocado sobre todo en Java, pero nosotros lo usamos comunicandonos con una
+							máquina externa mediante ssh, esa máquina contiene el mismo entorno que el de desarrollo y
+							Jenkins ejecuta un script dentro de esa máquina que se encarga de descargar el código,
+							actualizar el entorno con las nuevas dependencias si es que han cambiado, y ejecutar los tests.
+						</aside>
+					</section>
+					<section class="gallery-container">
+						<h3>Nuevo proyecto Codeship</h3>
+						<img class="fragment current-visible" data-fragment-index="0" src="img/codeship.jpg">
+						<img class="fragment current-visible" data-fragment-index="1" src="img/codeship-step1.png">
+						<p class="fragment current-visible" data-fragment-index="1">1. Seleccionamos la Plataforma del VCS</p>
+						<img class="fragment current-visible" data-fragment-index="2" src="img/codeship-step2.png">
+						<p class="fragment current-visible" data-fragment-index="2">2. Conectamos Codeship con la Plataforma</p>
+						<img class="fragment current-visible" data-fragment-index="3" src="img/codeship-step3.png">
+						<p class="fragment current-visible" data-fragment-index="3">3. Seleccionamos Codeship Basic</p>
+						<img class="fragment current-visible" data-fragment-index="4" src="img/codeship-step4-1.png">
+						<p class="fragment current-visible" data-fragment-index="4">4. Configuramos el Setup del Proyecto</p>
+						<img class="fragment current-visible" data-fragment-index="5" src="img/codeship-step4-2.png">
+						<p class="fragment current-visible" data-fragment-index="5">4. Configuramos los Tests del Proyecto</p>
+						<img class="fragment current-visible" data-fragment-index="6" src="img/codeship-step5.png">
+						<p class="fragment current-visible" data-fragment-index="6">5. Sistema CI listo!</p>
+						<img class="invisible" src="img/codeship-step1.png">
+						<aside class="notes">
+							1. Crear proyecto nuevo
+							2. Conectar con Github
+							3. Dar permisos a la cuenta
+							4. Seleccionamos Codeship Basic
+							5. Configuramos el Proyecto
+							6. Y ya solo quedará hacer push y ver los informes!
+							Muy sencillo de usar, gratis, aplicación ideal para empezar.
+							Sin embargo si en vuestra aplicación trabajan muchos desarrolladores poco a poco el hecho de que no se ejecuten en paralelo será un impedimento, y para ello hará falta pagar. Además tiene 100 builds de máximo.
+						</aside>
+					</section>
+				</section>
+				<section>
+					<section>
 						<h2>Revisiones de Código</h2>
 						<img src="img/codereview.png">
 						<aside class="notes">
 							Para desarrollar y mantener código de calidad es muy importante que el código se revise por uno o más desarrolladores, diferentes al autor. De esta forma se comprueba que se siguen los estándares de desarrollo de la organización, el código es legible, eficiente y no tiene errores visibles.
 
+							DEJAR PARA LUEGO. DE ESTO PUEDO HABLAR CUANDO HABLE DE GITHUB TAMBIEN, PERO TIENE SENTIDO HABLAR CON INTEGRACION CONTINUA
 						</aside>
 					</section>
-					<section>
-						<h3>Pull Request</h3>
-					</section>
-				</section>
-				<section>
-					<section>
-						<h2>Integración Continua</h2>
-						<aside class="notes">
-							Consiste en integrar los cambios hechos por un miembro del equipo en el momento que estén y pasen los tests.
-							Para ello hace falta una máquina externa que ejecute los tests, que indique cuales pasan y cuales no.
-							Una maquina virtual se descarga los archivos del repositorio, ejecuta los tests y crea un informe.
-							Por tanto, además del código del proyecto necesitará saber las dependencias para ejecutar los tests.
-						</aside>
-					</section>
-					<section>
-						<h3>Sistemas de Integración Continua</h3>
-						<aside class="notes">
-						Jenkins, Travis CI, Circle CI, Codeship...
-						Nosotros usamos Codeship, pero tambien usamos Jenkins porque nos permite mayor control.
-						Comparativa Travis CI, Circle CI, Codeship:
-						https://strongloop.com/strongblog/node-js-travis-circle-codeship-compare/
-						Lo mejor es probar distintos y elegir el que mejor se adapte a nuestro proyecto.
-						Jenkins está enfocado sobre todo en Java, pero nosotros lo usamos comunicandonos con una
-						máquina externa mediante ssh, esa máquina contiene el mismo entorno que el de desarrollo y
-						Jenkins ejecuta un script dentro de esa máquina que se encarga de descargar el código,
-						actualizar el entorno con las nuevas dependencias si es que han cambiado, y ejecutar los tests.
-						</aside>
-					</section>
-					<section>
-						<h3>Jenkins</h3>
-					</section>
-					<section>
-						<h3>Codeship</h3>
+					<section class="gallery-container codereview">
+						<h3>Revisiones de Código</h3>				
+						<img class="fragment current-visible ci-step1" data-fragment-index="0" src="img/codereview-step1.png">				
+						<img class="fragment current-visible ci-step2" data-fragment-index="1" src="img/codereview-step2.png">				
+						<img class="fragment current-visible ci-step3" data-fragment-index="2" src="img/codereview-step3.png">		
+						<img class="invisible" data-fragment-index="2" src="img/codereview-step3.png">	
 					</section>
 				</section>
 				<section>
 					<section>
 						<h2>Despliegue continuo</h2>
+						<aside class="notes">
+							Extensión de la Integración Continua, 
+							tiene como objetivo minimizar la cantidad de tiempo desde la 
+							primera linea de código hasta que puede ser usado por usuarios
+							reales en producción.
+							Para poder hacerlo, el equpo cuenta con herramientas que automizan el despliegue. También se requiere tener las herramientas necesarias para abortar el despliegue, volver a un estado anterior y notificar cuando 
+							el despliegue haya finalizado.
+
+							Continuous Delivery vs Continuous Deployment
+							https://puppet.com/blog/continuous-delivery-vs-continuous-deployment-what-s-diff
+						</aside>
 					</section>
 					<section>
-						<h2>PaaS</h2>
+						<h3>Ventajas Despliegue Continuo</h3>
+						<ul>
+							<li>Incrementos de productos más fluidos</li>
+							<li>Feedback de usuarios más temprano</li>
+							<li>Proceso automatizado evitando error humano</li>
+							<li>Cualquier miembro del equipo puede hacer el despliegue</li>
+						</ul>
 					</section>
-					<section>
-						<h3>Codeship + GIT</h3>
+					<section class="gallery-container">
+    					<span class="glyphicon glyphicon-question-sign" data-toggle="modal" data-target="#modal-cd-referencias"></span>
+						<h4>Despliegue Continuo con Codeship</h4>						
+						<img class="fragment current-visible" data-fragment-index="0" src="img/heroku-new-app.png">		
+						<p class="fragment current-visible" data-fragment-index="0">1. Creamos nueva aplicación en Heroku</p>
+						<img class="fragment current-visible" data-fragment-index="1" src="img/ci-step1.png">
+						<p class="fragment current-visible" data-fragment-index="1">2. Configuramos el Deployment en Codeship</p>
+						<img class="fragment current-visible cd-step2" data-fragment-index="2" src="img/cd-step2.png">
+						<p class="fragment current-visible" data-fragment-index="2">3. Configuramos</p>
+						<img class="fragment current-visible cd-step3" data-fragment-index="3" src="img/cd-step3.png">
+						<p class="fragment current-visible" data-fragment-index="3">3. Configuramos</p>
+						<img class="invisible" src="img/cd-step2.png">
 					</section>
 				</section>
 				<section>
-					<h2>Soporte del producto</h2>
-					<p>Zendesk</p>
-				</section>
-				<section>
-					<h2>Comunicación</h2>
-					<p>Email y Slack</p>
+					<h2>Una vez desplegada...</h2>
+					<ul>
+						<li>Soporte a usuarios</li>
+						<li>Comunicación</li>
+					</ul>
+					<aside class="notes">
+						Soporte a usuarios y técnico: Zendesk
+						Comunicación dentro de la organización: Email y Slack
+					</aside>
 				</section>
 			</div>
 		</div>
+        <div class="modal fade" id="modal-ci-referencias" tabindex="-1" role="dialog">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-body">
+                  <h4>Referencias CI:</h4>
+                  <ul>
+                      	<li>
+							<a href="https://jenkins.io/" target="_blank">
+								Jenkins
+							</a>
+						</li>
+                      	<li>
+							<a href="https://travis-ci.org/" target="_blank">
+								Travis CI
+							</a>
+						</li>
+                      	<li>
+							<a href="https://circleci.com/" target="_blank">
+								Circle CI
+							</a>
+						</li>
+                      	<li>
+							<a href="https://codeship.com" target="_blank">
+								Codeship
+							</a>
+						</li>
+                  </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="modal-cd-referencias" tabindex="-1" role="dialog">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-body">
+                  <h4>Referencias Continuous Deployment:</h4>
+                  <ul>
+                  	  <li>
+        				<a href="https://devcenter.heroku.com/articles/django-app-configuration" target="_blank">How to create a Django app for Heroku</a>
+        			  </li>
+        		  </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
 
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.js"></script>
@@ -347,5 +538,7 @@
 				]
 			});
 		</script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	</body>
 </html>
