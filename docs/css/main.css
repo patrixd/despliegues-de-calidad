@@ -130,6 +130,31 @@
   background: -webkit-radial-gradient(center, circle cover, #BBDEFB 0%, #E3F2FD 100%);
   background: radial-gradient(center, circle cover, #BBDEFB 0%, #E3F2FD 100%); }
 
+.cvs-sky .reveal {  
+  background: #CE93D8;
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #F3E5F5), color-stop(100%, #CE93D8));
+  background: -webkit-radial-gradient(center, circle cover, #F3E5F5 0%, #CE93D8 100%);
+  background: radial-gradient(center, circle cover, #F3E5F5 0%, #CE93D8 100%); 
+}
+.ci-sky .reveal {  
+  background: #80CBC4;
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #E0F2F1), color-stop(100%, #80CBC4));
+  background: -webkit-radial-gradient(center, circle cover, #E0F2F1 0%, #80CBC4 100%);
+  background: radial-gradient(center, circle cover, #E0F2F1 0%, #80CBC4 100%); 
+}
+.review-sky .reveal {  
+  background: #81D4FA;
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #E1F5FE), color-stop(100%, #81D4FA));
+  background: -webkit-radial-gradient(center, circle cover, #E1F5FE 0%, #81D4FA 100%);
+  background: radial-gradient(center, circle cover, #E1F5FE 0%, #81D4FA 100%); 
+}
+.cd-sky .reveal {
+  background: #F1F8E9;
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #F1F8E9), color-stop(100%, #C5E1A5));
+  background: -webkit-radial-gradient(center, circle cover, #F1F8E9 0%, #C5E1A5 100%);
+  background: radial-gradient(center, circle cover, #F1F8E9 0%, #C5E1A5 100%); 
+}
+
 section[data-state=animated-clouds] h2 {
   text-transform: inherit;
   font-weight: bold;
@@ -316,6 +341,40 @@ span[data-toggle=modal] {
   .reveal .gallery-container .cd-step3 {
     max-width: 70%;
   }
-  .reveal .gallery-container .cd-step2 {
-    max-width: 70%;
+  .reveal .gallery-container .cd-step4 {
+    max-width: 80%;
   }
+  .reveal .git-link {
+    position: relative;
+    text-align: left;
+    float: left;
+    margin-left: 10%; }
+  .reveal .git-link img {
+    display: inline-block; }
+  .reveal .git-link div {
+    position: absolute;
+    display: inline-block;
+    bottom: 2em; }
+  .reveal .gallery-container p {
+    font-size: .9em; 
+    margin: 0; }
+
+
+.twitter {
+  background: url(../img/social/social-tw.png) 0 0 no-repeat; }
+.reveal .twitter-name {
+  font-size: .7em; }
+.linkedin {
+  background: url(../img/social/social-linkedin.png) 0 0 no-repeat; }
+
+.develagora {
+  background: url(../img/social/develagora.png) 0 0 no-repeat; }
+
+.reveal .twitter, .reveal .linkedin, .reveal .develagora {
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  margin-left: 5px;
+  text-decoration: none; }
+  .reveal .twitter:hover, .reveal .linkedin:hover, .reveal .develagora:hover {
+    text-decoration: none; }

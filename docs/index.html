@@ -39,11 +39,14 @@
 				<section data-state="animated-clouds"><p>&nbsp;</p><p>&nbsp;</p>
 					<h2 id="no-es-s-lo-texto-y-enlaces">Despliega código en la nube de forma Ágil</h2>
 					<h3 id="la-web-no-tiene-l-mites">Buenas prácticas y Herramientas</h3>
-                    <a href="https://github.com/patrixd/despliega-con-calidad" target="_blank">
-                        <img src="img/github_cat.png" alt="github image">
-                    </a>
+					<div class="git-link">
+	                    <a href="https://github.com/patrixd/despliegues-de-calidad" target="_blank">
+	                        <img src="img/github_cat.png" alt="github image">
+	                    	<div>github.com/patrixd/despliegues-de-calidad</div>
+	                    </a>
+	                </div>
 				</section>
-				<section data-background="img/foto2.jpg">
+				<section data-background="img/foto.jpg">
 					<div class="row">
 						<div class="hello col-sm-10">
 							<div class="name">
@@ -52,15 +55,17 @@
 							<div class="category text-faded">
 							    Ingeniera Software Senior<br>
 								<a href="http://develagora.com" target="_blank" class="develagora" alt="Develagora">&nbsp;</a>&nbsp;&nbsp;
-	                            <a href="https://twitter.com/ccsakuweb" target="_blank" class="twitter" alt="Follow me on Twitter!">&nbsp;</a>&nbsp;&nbsp;
-								<a href="http://www.linkedin.com/in/patriciajuarezmunoz" target="_blank" class="linkedin" alt="Contact me on Linkedin!">&nbsp;</a>
+								<a href="http://www.linkedin.com/in/patriciajuarezmunoz" target="_blank" class="linkedin" alt="Contact me on Linkedin!">
+								&nbsp;&nbsp;
+	                            <a href="https://twitter.com/ccsakuweb" target="_blank" class="twitter" alt="Follow me on Twitter!">&nbsp;</a>
+	                            <span class="twitter-name">@ccsakuweb</span>
 							</div>
 							<hr class="light">
 							<p class="text-faded">
 							    Licenciada en Ingeniería Informática en la Universidad de Granada (España). <br>
 							    Experta en el desarrollo de aplicaciones web y móviles.<br><br>
-							    2007-2016 Freelance en empresas como 3DVista y Axesor.<br>
-							    2016-Actualidad Senior Software Engineer en Badger Maps.
+							    2007-2016 Freelance en 3DVista y Axesor.<br>
+							    2016- Senior Software Engineer en Badger Maps.
 							</p>
 						</div>
 					</div>
@@ -235,7 +240,7 @@
 									<img src="img/vagrantfile.png">
 								</a>
 							</div>
-							<div class="col-sm-4 vagrant-command">
+							<div class="col-xs-4 vagrant-command">
 								<pre class="html-preview-code">
 									<code class="hljs bash">
 vagrant up
@@ -281,7 +286,7 @@ vagrant ssh
 									<img src="img/dockerfile.png">
 								</a>
 							</div>
-							<div class="col-sm-4 vagrant-command">
+							<div class="col-xs-4 vagrant-command">
 								<pre class="html-preview-code">
 									<code class="hljs bash">
 docker-compose up
@@ -313,7 +318,7 @@ docker-compose up
 						</aside>
 					</section>
 				</section>
-				<section>
+				<section data-state="cvs-sky">
 					<section>
 						<h3>Sistema de Control de Versiones</h3>
 						<img src="img/vcs.png">
@@ -345,7 +350,7 @@ docker-compose up
 						</aside>
 					</section>
 				</section>
-				<section>
+				<section data-state="ci-sky">
 					<section>
 						<h2>Integración Continua</h2>
 						<aside class="notes">
@@ -379,7 +384,7 @@ docker-compose up
 					</section>
 					<section class="gallery-container">
 						<h3>Nuevo proyecto Codeship</h3>
-						<img class="fragment current-visible" data-fragment-index="0" src="img/codeship.jpg">
+						<img class="fragment current-visible" data-fragment-index="0" src="img/codeshipflow.png">
 						<img class="fragment current-visible" data-fragment-index="1" src="img/codeship-step1.png">
 						<p class="fragment current-visible" data-fragment-index="1">1. Seleccionamos la Plataforma del VCS</p>
 						<img class="fragment current-visible" data-fragment-index="2" src="img/codeship-step2.png">
@@ -405,7 +410,7 @@ docker-compose up
 						</aside>
 					</section>
 				</section>
-				<section>
+				<section data-state="review-sky">
 					<section>
 						<h2>Revisiones de Código</h2>
 						<img src="img/codereview.png">
@@ -423,7 +428,7 @@ docker-compose up
 						<img class="invisible" data-fragment-index="2" src="img/codereview-step3.png">	
 					</section>
 				</section>
-				<section>
+				<section data-state="cd-sky">
 					<section>
 						<h2>Despliegue continuo</h2>
 						<aside class="notes">
@@ -439,7 +444,8 @@ docker-compose up
 						</aside>
 					</section>
 					<section>
-						<h3>Ventajas Despliegue Continuo</h3>
+						<h3>Despliegue Continuo</h3>
+						<h4>Ventajas</h4>
 						<ul>
 							<li>Incrementos de productos más fluidos</li>
 							<li>Feedback de usuarios más temprano</li>
@@ -458,6 +464,10 @@ docker-compose up
 						<p class="fragment current-visible" data-fragment-index="2">3. Configuramos</p>
 						<img class="fragment current-visible cd-step3" data-fragment-index="3" src="img/cd-step3.png">
 						<p class="fragment current-visible" data-fragment-index="3">3. Configuramos</p>
+						<img class="fragment current-visible cd-step4" data-fragment-index="4" src="img/cd-step4.png">
+						<p class="fragment current-visible" data-fragment-index="4">4. Push + Codeship</p>
+						<img class="fragment current-visible" data-fragment-index="5" src="img/django.png">
+						<p class="fragment current-visible" data-fragment-index="5">5. Funciona!</p>
 						<img class="invisible" src="img/cd-step2.png">
 					</section>
 				</section>
@@ -465,12 +475,26 @@ docker-compose up
 					<h2>Una vez desplegada...</h2>
 					<ul>
 						<li>Soporte a usuarios</li>
+						<li>Monitorización</li>
 						<li>Comunicación</li>
 					</ul>
 					<aside class="notes">
 						Soporte a usuarios y técnico: Zendesk
 						Comunicación dentro de la organización: Email y Slack
 					</aside>
+				</section>
+				<section>
+					<h2>¿Dudas?</h2>
+					<p>Coméntalas aquí o por Twitter a @ccsakuweb</p>
+				</section>
+				<section>
+					<h2>Gracias&nbsp;&nbsp;;)</h2>
+					<p>
+						<a href="https://patrixd.github.io/despliegues-de-calidad/" target="_blank">patrixd.github.io/despliegues-de-calidad</a>
+					</p>
+					<p>
+						<a href="http://github.com/patrixd/despliegues-de-calidad" target="_blank">github.com/patrixd/despliegues-de-calidad</a>
+					</p>
 				</section>
 			</div>
 		</div>
